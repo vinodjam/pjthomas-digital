@@ -1,0 +1,111 @@
+---
+// Import necessary components and utilities
+import MainLayout from "@/layouts/MainLayout.astro";
+import TableOfContents from "@components/TableOfContents.astro";
+import Prose from '@components/Prose.astro';
+import { getCollection, render } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { SITE } from "@data/constants";
+
+// Update getStaticPaths for English posts
+export async function getStaticPaths() {
+  const blogPosts = await getCollection("blog", ({ id }) =>
+    id.startsWith("en/")
+  );
+  return blogPosts.map((post) => {
+    const idWithoutLang = post.id.replace(/^en\//, ""); // Remove the "en/" prefix
+    return {
+      params: { id: idWithoutLang },
+      props: { post },
+    };
+  });
+}
+
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+// Get the current post's data
+const { post } = Astro.props as Props;
+const { Content, headings } = await render(post);
+
+// const blogPosts: CollectionEntry<"blog">[] = await getCollection(
+//   "blog",
+//   ({ id }) => id.startsWith("ml/")
+// );
+
+// Filter out the current post to get related posts
+// Note: This is a very basic way of choosing related posts, just for the purpose of the example.
+// In a production site, you might want to implement a more robust algorithm, choosing related posts based on tags, categories, dates, authors, or keywords.
+// See example: https://blog.codybrunner.com/2024/adding-related-articles-with-astro-content-collections/
+// const relatedPosts: CollectionEntry<"blog">[] = blogPosts.filter(
+//   (blogEntry) => blogEntry.id !== post.id
+// );
+
+const pageTitle: string = `${post.data.title} | ${SITE.title}`;
+// For the meta description, use the first paragraph of content if available
+const metaDescription =
+  post.data.contents[0] || `Read ${post.data.title}`;
+const ogTitle = `${post.data.title} | Blog | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.data.title,
+    image: post.data.cardImage.src,
+    datePublished: post.data.pubDate.toISOString(),
+    author: {
+      "@type": "Person",
+      name: post.data.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.title,
+      logo: {
+        "@type": "ImageObject",
+        url: "https://screwfast.uk/favicon.ico",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://screwfast.uk/blog/${post.id.replace(/^en\//, "")}`,
+    },
+  }}
+>
+
+  <section class="mx-auto px-4 pt-6 pb-12 sm:px-6 lg:px-8 lg:pt-10 grid grid-cols-5 gap-8 md:gap-3">
+
+
+        <aside>
+            <div class="2xl sticky top-20 text-tiny md:text-base text-neutral-800 dark:text-neutral-200">
+
+            <TableOfContents headings={headings} />
+            </div>
+
+        </aside>
+
+    <div class="col-span-4">
+
+      {/* Blog post title */}
+      <h2
+        class="mb-3 text-2xl font-bold text-neutral-800 md:text-3xl dark:text-neutral-200"
+      >
+        {post.data.title}
+      </h2>
+      {/* Blog post contents */}
+       <div class="w-full">
+      <Prose>
+      <Content/>
+      </Prose>
+       <div>
+
+    </div>
+  </section>
+
+</MainLayout>

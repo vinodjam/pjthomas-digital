@@ -1,6 +1,7 @@
-@import 'tailwindcss';
-@import 'preline/variants.css';
+@import "tailwindcss";
+@import "preline/variants.css";
 @plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -95,6 +96,10 @@
   --color-zinc-800: oklch(0.274 0.006 286.033);
   --color-zinc-900: oklch(0.21 0.006 285.885);
   --color-zinc-950: oklch(0.141 0.005 285.823);
+
+  --text-tiny: 0.5rem;
+  --text-tiny--line-height: 0.5rem;
+  /*--text-tiny--font-weight: 500;*/
 }
 
 /*
@@ -118,4 +123,14 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+}
+
+ul li::marker {
+  color: saddlebrown;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
 }

@@ -1,0 +1,41 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import CardBlog from "@components/ui/cards/CardBlog.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+
+const malayalamPosts = await getCollection("blog", ({ id }) => {
+  return id.startsWith("ml/");
+});
+
+const blogPosts: CollectionEntry<"blog">[] = malayalamPosts.sort(
+  (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<MainLayout>
+
+    <div class="content py-2 px-10 mt-5">
+        <img class="w-48 h-72 mr-4 float-left" src="/photohome.jpg" alt="">
+        <div class=" text-neutral-800 dark:text-neutral-200">
+            Dr P J Thomas was born on February 25, 1895, in Kuravilangad, Travancore. He completed his B.Litt. (1922) and D.Phil. (1924) in Economics from Oxford University, among the first Indian economists to earn a doctorate from Oxford. He was appointed Economic Adviser to the Government of India during the period 1942-1948 and was part of the Indian delegation to the 1945 San Francisco Conference leading to the creation of the UN. He also served as a Rajya Sabha MP from 1957-1962. He championed the causes of the common man and pursued philantrophic causes in his private life, for example, donating 10 acres of his property to found Avilalayam, a shelter and vocational learning centre, to support homeless women, offering residential facility with vocational training. He eventually passed away on July 26th, 1965, in Aluva, Kerala.
+        </div>
+    </div>
+
+    <div class="content flex py-2 px-10 mt-5  text-neutral-800 dark:text-neutral-200">
+        Click the below links to learn more
+    </div>
+
+  <section
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    {/* Blog posts grid */}
+    <div class="grid gap-6 lg:grid-cols-2">
+      {blogPosts.map((blogEntry) => <CardBlog blogEntry={blogEntry} />)}
+    </div>
+  </section>
+
+</MainLayout>
