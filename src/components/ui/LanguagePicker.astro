@@ -25,7 +25,7 @@ import Icon from "./icons/Icon.astro";
   </button>
 
   <div
-    class="hs-dropdown-menu duration left-[20%]! top-[98%]! mt-2 hidden transform-none! rounded-lg bg-neutral-50 p-2 opacity-0 shadow-md transition-[opacity,margin] before:absolute before:-top-4 before:start-0 before:h-4 before:w-full after:absolute after:-bottom-4 after:start-0 after:h-4 after:w-full hs-dropdown-open:opacity-100 dark:divide-neutral-700 dark:border dark:border-neutral-700 dark:bg-neutral-800 md:left-[90%]! md:top-[80%]!"
+    class="hs-dropdown-menu duration left-[10%]! top-[60%]! mt-2 hidden transform-none! rounded-lg bg-neutral-50 p-2 opacity-0 shadow-md transition-[opacity,margin] before:absolute before:-top-4 before:start-0 before:h-4 before:w-full after:absolute after:-bottom-4 after:start-0 after:h-4 after:w-full hs-dropdown-open:opacity-100 dark:divide-neutral-700 dark:border dark:border-neutral-700 dark:bg-neutral-800 md:left-[85%]! md:top-[5%]!"
     aria-labelledby="hs-dropdown-hover-event"
   >
     {
@@ -51,7 +51,7 @@ import Icon from "./icons/Icon.astro";
   document.addEventListener("DOMContentLoaded", function () {
     // Only target language picker links
     const languageLinks = document.querySelectorAll(".hs-dropdown-menu[aria-labelledby='hs-dropdown-hover-event'] a");
-    
+
     languageLinks.forEach((element) => {
       const link = element as HTMLAnchorElement;
       const lang = link
@@ -63,7 +63,7 @@ import Icon from "./icons/Icon.astro";
         event.preventDefault();
 
         const url = new URL(window.location.href);
-        
+
         const currentPath = url.pathname
           .split("/")
           .filter((part) => part && !languages.includes(part as TLanguage))
@@ -78,7 +78,7 @@ import Icon from "./icons/Icon.astro";
 
         newPath = newPath.replace(/\/+/g, "/");
         if (newPath === "") newPath = "/";
-        
+
         window.location.href = `${url.origin}${newPath}${url.search}`;
       });
     });

@@ -1,42 +1,21 @@
 // An array of links for navigation bar
 const navBarLinks = [
-  { name: "Home", url: "/" },
-  { name: "Products", url: "/products" },
-  { name: "Services", url: "/services" },
-  { name: "Blog", url: "/blog" },
-  { name: "Contact", url: "/contact" },
+  { name: "Chronology", url: "/posts/chronology", icon: "calendar" },
+  { name: "Academia", url: "/posts/academia", icon: "graduationcap" },
+  { name: "Community", url: "/posts/community", icon: "people" },
+  { name: "In Media", url: "/posts/inmedia", icon: "newspaper" },
+  { name: "Resources", url: "/posts/resources", icon: "archive" },
 ];
-// An array of links for footer
+
 const footerLinks = [
-  {
-    section: "Ecosystem",
-    links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
-    ],
-  },
-  {
-    section: "Company",
-    links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
-    ],
-  },
+  { name: "Contact", url: "/contact", icon: "envelope" },
+  { name: "Changelog", url: "/changelog", icon: "book" },
 ];
-// An object of links for social icons
-const socialLinks = {
-  facebook: "https://www.facebook.com/",
-  x: "https://twitter.com/",
-  github: "https://github.com/mearashadowfax/ScrewFast",
-  google: "https://www.google.com/",
-  slack: "https://slack.com/",
-};
+
+const homePageName = "Dr P J Thomas Memorial";
 
 export default {
   navBarLinks,
   footerLinks,
-  socialLinks,
+  homePageName,
 };

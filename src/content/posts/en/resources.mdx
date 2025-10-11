@@ -1,0 +1,53 @@
+---
+title: "Other resources"
+description: "Other resouces of interest"
+author: "Admin"
+role: "Admin"
+authorImage: "@/images/posts/anna.avif"
+authorImageAlt: "Avatar Description"
+pubDate: 2025-06-01
+cardImage: "@/images/posts/box-archive-solid-full.svg"
+cardImageAlt: "Side view worker wearing gloves"
+readTime: 3
+tags: ["resources", "affordable", "efficiency" ]
+contents: [
+        "Other resouces of interest"
+]
+---
+
+import { Image } from 'astro:assets';
+import note1 from './assets/note1.jpg';
+import note2 from './assets/note2.jpg';
+
+#
+
+## Photos
+
+<figure class="h-120 py-2">
+<embed  src="/1959FamilyPhoto.pdf" type="application/pdf" width="100%" height="100%" />
+<figcaption class="flex items-center justify-center">Family photo</figcaption>
+</figure>
+
+
+
+<figure class="h-120 py-2">
+<embed  src="/3x2-5flex1.pdf" type="application/pdf" width="100%" height="100%" />
+<figcaption class="flex items-center justify-center">Flex photo collection from 60th Death Anniversary</figcaption>
+</figure>
+
+<figure class="h-120 py-2">
+<embed  src="/3x2-5flex2.pdf" type="application/pdf" width="100%" height="100%" />
+<figcaption class="flex items-center justify-center">Flex photo collection from 60th Death Anniversary</figcaption>
+</figure>
+
+
+
+<figure>
+<Image src={note1} alt="A rocketship in space." />
+<figcaption class="flex items-center justify-center">Handwritten notes from unknown author</figcaption>
+</figure>
+
+<figure>
+<Image src={note2} alt="A rocketship in space." />
+<figcaption class="flex items-center justify-center">Handwritten notes from unknown author</figcaption>
+</figure>
