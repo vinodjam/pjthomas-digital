@@ -1,8 +1,6 @@
 ---
 // Import necessary components and utilities
-import AvatarBlog from "@components/ui/avatars/AvatarBlog.astro";
 import { Image } from "astro:assets";
-import { formatDate } from "@utils/utils";
 import type { CollectionEntry } from "astro:content";
 
 const { blogEntry, blogLocale = "" } = Astro.props;
@@ -20,8 +18,8 @@ interface Props {
 <a
   class="group relative block rounded-xl outline-hidden ring-zinc-500 transition duration-500 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden"
   href={blogLocale && blogLocale !== "en"
-    ? `/${blogLocale}/blog/${blogEntry.id.replace(/^fr\//, "")}/`
-    : `/blog/${blogEntry.id.replace(/^en\//, "")}/`}
+    ? `/${blogLocale}/posts/${blogEntry.id.replace(/^fr\//, "")}/`
+    : `/posts/${blogEntry.id.replace(/^en\//, "")}/`}
   data-astro-prefetch
 >
   <!-- The container for the blog post's cover image. Uses astro:assets' Image for image source -->
@@ -38,7 +36,7 @@ interface Props {
     />
   </div>
   <!-- The container for the blog author's avatar and associated metadata (author name and publication date) -->
-  <div class="absolute inset-x-0 top-0 z-10">
+  <!-- <div class="absolute inset-x-0 top-0 z-10">
     <div class="flex h-full flex-col p-4 sm:p-6">
       <div class="flex items-center">
         <AvatarBlog blogEntry={blogEntry} />
@@ -53,7 +51,7 @@ interface Props {
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- The container for the blog post's title and description -->
   <div class="absolute inset-x-0 bottom-0 z-10">
     <div class="flex h-full flex-col p-4 sm:p-6">

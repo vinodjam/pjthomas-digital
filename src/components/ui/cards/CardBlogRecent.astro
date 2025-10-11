@@ -2,8 +2,6 @@
 // Import all required components and utilities
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
-import AvatarBlogLarge from "@components/ui/avatars/AvatarBlogLarge.astro";
-import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 const { blogEntry, recentBlogLocale = "" } = Astro.props;
 
@@ -43,7 +41,6 @@ interface Props {
     </h2>
     <!-- Container for the author's avatar and metadata -->
     <div class="mt-6 flex items-center sm:mt-10">
-      <AvatarBlogLarge blogEntry={blogEntry} />
 
       <div class="ms-3 sm:ms-4">
         <p class="font-bold text-neutral-800 dark:text-neutral-200 sm:mb-1">
@@ -55,12 +52,14 @@ interface Props {
       </div>
     </div>
     <!-- Read More button which is a link to the blog post detailed page -->
+    <!--
     <div class="mt-5">
       <PrimaryCTA
         url={recentBlogLocale && recentBlogLocale !== "en" ? `/${recentBlogLocale}/blog/${blogEntry.id.replace(/^fr\//, '')}/` : `/blog/${blogEntry.id.replace(/^en\//, '')}/`}
         title="Read More"
         data-astro-prefetch
       />
+      -->
     </div>
   </div>
 </div>
