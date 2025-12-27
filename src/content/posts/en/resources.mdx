@@ -19,53 +19,140 @@ import { Image } from 'astro:assets';
 import note1 from './assets/note1.jpg';
 import note2 from './assets/note2.jpg';
 import flex1 from './assets/3x2-5flex1.png';
-import flex2 from './assets/3x2-5flex1.png';
+import flex2 from './assets/3x2-5flex2.png';
 import family0 from './assets/1959FamilyPhoto.png';
 import family1 from './assets/family1.jpg';
 import family2 from './assets/family2.jpg';
 import grave from './assets/grave.jpg';
 import photo1930 from './assets/1930sMadrasStudioPhoto.jpg';
 import photo1948 from './assets/1948WeddingFamilyPhoto.jpg';
+import UN1 from './assets/UN7685822.jpg';
+import UN2 from './assets/UN713040.jpg';
+import UN3 from './assets/UN7659834.jpg';
+import UN4 from './assets/UN7704588.jpg';
+
+import diary1 from './assets/diary/page1.jpg';
+import diary2 from './assets/diary/page2.jpg';
+import diary3 from './assets/diary/page3.jpg';
+
+
+import letter1 from './assets/letter1.jpg';
 
 #
 
-## Photos
+## Family Photos
 
 
 <figure>
 <Image class="ml-auto mr-auto" src={photo1930} alt="Family photo" />
-<figcaption class="flex items-center justify-center">1930s Studio Photo (Madras)</figcaption>
+<figcaption class="flex items-center justify-center">1930s Studio Photo (Madras) [From L to R: Rosamma, Alice, P J Thomas, Annamma]</figcaption>
 </figure>
 
 
 <figure>
 <Image class="ml-auto mr-auto" src={photo1948} alt="Family photo" />
-<figcaption class="flex items-center justify-center">1948 Family Wedding Photo</figcaption>
+<figcaption class="flex items-center justify-center">1948 Family Wedding Photo of daughter Alice with Jacob Kalliath [From L to R: Devasia Ponnatt, J Thomas Padavath, P J Thomas, Joseph, Jacob Kalliath, Alice, Annamma, Elikutty, Rosamma]</figcaption>
 </figure>
 
 <figure>
 <Image class="ml-auto mr-auto"  src={family0} alt="Family photo" />
+<figcaption class="flex items-center justify-center">1959 family photo [From L to R: Standing - Thomas, T M Jacob, Maya, George, Joseph; Seated - Rosamma, Matthew, J Thomas, Annamma, P J Thomas, Alice, Joseph, Baby; Seated Ground - Anita, Louis, AAnthony, Mani]</figcaption>
+
 <Image class="ml-auto mr-auto"  src={family1} alt="Family photo" />
+<figcaption class="flex items-center justify-center">1960s family photo</figcaption>
+
 <Image class="ml-auto mr-auto"  src={family2} alt="Family photo" />
-<figcaption class="flex items-center justify-center">Family photos</figcaption>
+<figcaption class="flex items-center justify-center">1960s family photo</figcaption>
 </figure>
+
+## UN Photos & source
+
+
+Reproduced from UN photos under Fair Use exception (https://media.un.org/photo/en/guidelines)
+
+Delegates of fifty nations met at San Francisco between April 25 and June 26, 1945. Working on the Dumbarton Oaks proposals, the Yalta Agreement, and amendments proposed by various Governments, the Conference agreed upon the Charter of the United Nations and the Statute of the new International Court of Justice. The Charter was passed unanimously and signed by all the representatives. It came into force on October 24, 1945, when China, France, the USSR, the United Kingdom, and the United States and a majority of the other signatories had filed their instruments of ratification.
+
+<figure>
+<Image src={UN1} alt="UN photo 1" />
+<figcaption class="flex items-center justify-center"><a href = "https://media.un.org/photo/en/asset/oun7/oun7685822">UN Photo/Rosenberg</a></figcaption>
+<figcaption class="flex items-center justify-center">Commission II, General Assembly, Committee 3, Economic and Social Cooperation on 6 June 1945. Seated at table is Parekunnel J. Thomas, Economic Adviser to the Delegation of India.</figcaption>
+</figure>
+
+
+<figure>
+<Image src={UN2} alt="UN photo 2" />
+<figcaption class="flex items-center justify-center"><a href = "https://media.un.org/photo/en/asset/oun7/oun713040">UN Photo/Rosenberg</a></figcaption>
+<figcaption class="flex items-center justify-center">Sir A. Ramaswami Mudaliar, Supply Member of the Governor-General's Executive Council; Leader of the delegation from India, signing the UN Charter at a ceremony held at the Veterans' War Memorial Building on 26 June 1945.</figcaption>
+</figure>
+
+
+<figure>
+<Image src={UN3} alt="UN photo 3" />
+<figcaption class="flex items-center justify-center"><a href = "https://media.un.org/photo/en/asset/oun7/oun7659834">UN Photo</a></figcaption>
+<figcaption class="flex items-center justify-center">Members of the Delegations from India. Standing (left to right): Sgt. Crickmay, Mr. Ollenbach, Mr. Nagar, Mr. Thampi, Miss Felton, Miss Jones, Miss Hull, Mr. P. A. Menon, Mr. Nair, Capt. Brownsdon. Seated (left to right): General Cawthorn, Mr. Bartley, Sir Ramaswami Mudaliar, (Chairman), Sir. V. T. Krishnamachari, Mr. K.P.S. Menon, Dr. Thomas. [no date]</figcaption>
+</figure>
+
+
+<figure>
+<Image src={UN4} alt="UN photo 4" />
+<figcaption class="flex items-center justify-center"><a href = "https://media.un.org/photo/en/asset/oun7/oun7704588">UN Photo/Yould</a></figcaption>
+<figcaption class="flex items-center justify-center">Delegation of India. Left to right: Captain T.E. Brownsdon, Secretary; Major General W.J. Cawthorn, Military Adviser; Mr. John Bartley, Legal Adviser; Sir Firoz Khan Noon, Delegate; Sir A. Ramaswami Mudaliar, Chairman.</figcaption>
+</figure>
+
+
+## 60th Death Anniversary
+
 
 <figure>
 <Image class="ml-auto mr-auto"  src={grave} alt="Grave" />
-<figcaption class="flex items-center justify-center">Grave</figcaption>
+<figcaption class="flex items-center justify-center">Grave on 60th death anniversary</figcaption>
 </figure>
+
 
 <figure>
 <Image class="ml-auto mr-auto"  src={flex1} alt="Flex 1" />
 <Image class="ml-auto mr-auto"  src={flex2} alt="Flex 2" />
 <figcaption class="flex items-center justify-center">Flex photo collection from 60th Death Anniversary</figcaption>
-<figcaption class="flex items-center justify-center">Some photos reproduced from UN photos under Fair Use exception (https://media.un.org/photo/en/guidelines)</figcaption>
-<figcaption class="flex items-center justify-center"><a href = "https://media.un.org/photo/en/asset/oun7/oun7685822">UN Photo/Rosenberg</a></figcaption>
-<figcaption class="flex items-center justify-center"><a href = "https://media.un.org/photo/en/asset/oun7/oun713040">UN Photo/Rosenberg</a></figcaption>
-<figcaption class="flex items-center justify-center"><a href = "https://media.un.org/photo/en/asset/oun7/oun7659834">UN Photo</a></figcaption>
-<figcaption class="flex items-center justify-center"><a href = "https://media.un.org/photo/en/asset/oun7/oun7704588">UN Photo/Yould</a></figcaption>
+<figcaption class="flex items-center justify-center">Some photos reproduced from UN photos under Fair Use exception (https://media.un.org/photo/en/guidelines), see previous section</figcaption>
 </figure>
 
+
+
+## Daughter Alice's notes
+
+
+<figure>
+<Image class="ml-auto mr-auto" src={diary1} alt="Diary 1" />
+<Image class="ml-auto mr-auto" src={diary2} alt="Diary 2" />
+<Image class="ml-auto mr-auto" src={diary3} alt="Diary 3" />
+<figcaption class="flex items-center justify-center">Handwritten notes from daughter Alice Jacob Kalliath</figcaption>
+</figure>
+
+
+## Misc correspondence
+
+Correspondence with Jawaharlal Nehru from nehruarchive (Source : https://nehruarchive.in/documents/to-p-j-thomas-28-february-1958-98jlk)
+
+<blockquote>
+
+New Delhi 
+28th February 1958
+
+Dear Dr Thomas,
+
+Thank you for your letter of the 27th February. I entirely agree with you that we have not to slacken our efforts in regard to the food situation. I have been laying great stress on this. 
+
+As for our changing our food habits and introducing a better diet pattern. I also agree with you. But this is not an easy matter because people everywhere, and more especially in our country, are averse to changing their old-established habits. However, we must try. We have, indeed, suggested various menus of this diversified pattern. 
+
+Yours sincerely,
+Jawaharlal Nehru
+
+</blockquote>
+
+<figure>
+<Image class="ml-auto mr-auto"  src={letter1} alt="Handwritten note 1" />
+<figcaption class="flex items-center justify-center">Letter to niece Elikutty</figcaption>
+</figure>
 
 <figure>
 <Image class="ml-auto mr-auto"  src={note1} alt="Handwritten note 1" />

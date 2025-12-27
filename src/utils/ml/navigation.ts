@@ -1,7 +1,7 @@
 // An array of links for navigation bar
 const navBarLinks = [
   { name: "Chronology", url: "/ml/posts/chronology", icon: "calendar" },
-  { name: "Academia", url: "/ml/posts/academia", icon: "graduationcap" },
+  { name: "Scholarship", url: "/ml/posts/academia", icon: "graduationcap" },
   { name: "Community", url: "/ml/posts/community", icon: "people" },
   { name: "In Media", url: "/ml/posts/inmedia", icon: "newspaper" },
   { name: "Resources", url: "/ml/posts/resources", icon: "archive" },
