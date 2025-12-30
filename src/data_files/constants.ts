@@ -5,8 +5,8 @@ export const SITE = {
   tagline: "Dr P J Thomas Memorial",
   description: "Dr P J Thomas Memorial",
   description_short: "Dr P J Thomas Memorial",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  url: "https://pjthomas-digital.vercel.app/",
+  author: "Dr P J Thomas descendants",
 };
 
 export const SEO = {
@@ -33,9 +33,8 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description:
-    "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}`,
+  description: "Dr P J Thomas Digital Memorial/Museum",
   image: ogImageSrc,
 };
 
