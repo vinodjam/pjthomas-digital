@@ -134,3 +134,13 @@ th,
 td {
   border: 1px solid;
 }
+
+a {
+  word-break: break-all;
+}
+
+@media only screen and (min-width: 768px) {
+  a {
+    word-break: normal;
+  }
+}

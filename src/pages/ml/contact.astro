@@ -3,6 +3,9 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import { SITE } from "@data/constants";
 
+import { Image } from 'astro:assets';
+import qrcode from '/public/pjthomas-url-qr.png';
+
 const pageTitle: string = `Contact | ${SITE.title}`;
 const metaDescription =
   "Have questions or suggestions?";
@@ -51,6 +54,16 @@ const ogTitle = "Contact Us";
             <p class = "mt-5">
 
             </p>The source code for the website is available at <a href="https://github.com/vinodjam" class="text-indigo-900 dark:text-indigo-400 underline">https://github.com/vinodjam/pjthomas-digital</a></p>
+
+            <p>
+                Any media sourced from us is meant to be used only for non-commercial purposes/under Fair Use rules unless otherwise specified or permission received. External resources will follow corresponding licenses
+            </p>
+
+            <br></br>
+            <figure>
+            <Image class="ml-auto mr-auto"  src={qrcode} alt="QR Code" />
+            <figcaption class="flex items-center justify-center">Shareable QR Code for https://pjthomas-digital.vercel.app/</figcaption>
+            </figure>
          </div>
       </div>
     </section>

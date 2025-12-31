@@ -1,5 +1,8 @@
 ---
 import Icon from "@components/ui/icons/Icon.astro";
+import { Image } from 'astro:assets';
+import qrcode from '/public/pjthomas-url-qr.png';
+
 // Destructure the properties from Astro.props
 const {
   pageTitle,
@@ -77,6 +80,7 @@ const socialPlatforms: SocialPlatform[] = [
         ))
       }
     </div>
+    <Image class="ml-auto mr-auto"  src={qrcode} alt="QR Code" />
     <div class="py-2 first:pt-0 last:pb-0">
       <button
         type="button"
