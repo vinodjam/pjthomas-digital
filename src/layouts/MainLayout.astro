@@ -38,6 +38,20 @@ interface Props {
     />
     {/* Define the title of the page */}
     <title>{title}</title>
+    <style is:inline>
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+    </style>
+
+    <style is:global>
+      body {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+      }
+    </style>
     <script is:inline>
       // Script to handle dark mode. It will check if the theme is stored in localStorage or if dark theme is preferred by system settings
       if (
