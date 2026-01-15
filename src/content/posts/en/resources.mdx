@@ -18,6 +18,9 @@ contents: [
 import { Image } from 'astro:assets';
 import note1 from '../assets/note1.jpg';
 import note2 from '../assets/note2.jpg';
+
+import photohome from '../assets/photohome.jpg';
+
 import flex1 from '../assets/3x2-5flex1.png';
 import flex2 from '../assets/3x2-5flex2.png';
 import family0 from '../assets/1959FamilyPhoto.png';
@@ -53,6 +56,11 @@ import cardinal from '../assets/cardinal.jpg';
 
 
 <figure>
+<Image class="ml-auto mr-auto" src={photohome} alt="photo" />
+<figcaption class="flex items-center justify-center">Dr P J Thomas</figcaption>
+</figure>
+
+<figure>
 <Image class="ml-auto mr-auto" src={photo1930} alt="Family photo" />
 <figcaption class="flex items-center justify-center">1930s Studio Photo (Madras) [From L to R: Rosamma, Alice, P J Thomas, Annamma]</figcaption>
 </figure>
@@ -66,7 +74,7 @@ import cardinal from '../assets/cardinal.jpg';
 
 <figure>
 <Image class="ml-auto mr-auto" src={photo1948_2} alt="Family photo" />
-<figcaption class="flex items-center justify-center">Photo after 1948 Wedding daughter Alice with Jacob Kalliath [From L to R: Vempana John, Jacob Kalliath, P J Thomas, Joseph, ..., ; Alice, Ammachi, Amma, Kunyamma]</figcaption>
+<figcaption class="flex items-center justify-center">Photo after 1948 Wedding daughter Alice with Jacob Kalliath [From L to R: Vempana John, Jacob Kalliath, P J Thomas, J Thomas Padavath, Padavath Perappan, ; Alice, Annamma, Amma (Annamma's mother), Kunyamma (Annamma's sister)]</figcaption>
 </figure>
 
 
@@ -133,10 +141,8 @@ Delegates of fifty nations met at San Francisco between April 25 and June 26, 19
 
 
 <figure>
-<Image class="ml-auto mr-auto"  src={flex1} alt="Flex 1" />
 <Image class="ml-auto mr-auto"  src={flex2} alt="Flex 2" />
 <figcaption class="flex items-center justify-center">Flex photo collection from 60th Death Anniversary</figcaption>
-<figcaption class="items-center justify-center">Some photos reproduced from UN photos under Fair Use exception (<a class="break-all md:break-normal" href="https://media.un.org/photo/en/guidelines">https://media.un.org/photo/en/guidelines</a>), see previous section</figcaption>
 </figure>
 
 
