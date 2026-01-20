@@ -12,7 +12,7 @@ const footerLinks = [
   { name: "Changelog", url: "/ml/changelog", icon: "book" },
 ];
 
-const homePageName = "Dr P J Thomas Memorial";
+const homePageName = "Dr P J Thomas Museum";
 
 export default {
   navBarLinks,

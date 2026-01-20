@@ -1,10 +1,10 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "Dr P J Thomas Memorial",
-  tagline: "Dr P J Thomas Memorial",
-  description: "Dr P J Thomas Memorial",
-  description_short: "Dr P J Thomas Memorial",
+  title: "Dr P J Thomas Museum",
+  tagline: "Dr P J Thomas Museum",
+  description: "Dr P J Thomas Museum",
+  description_short: "Dr P J Thomas Museum",
   url: "https://pjthomas-digital.vercel.app/",
   author: "Dr P J Thomas descendants",
 };
@@ -34,7 +34,7 @@ export const OG = {
   type: "website",
   url: SITE.url,
   title: `${SITE.title}`,
-  description: "Dr P J Thomas Digital Memorial/Museum",
+  description: "Dr P J Thomas Digital Museum",
   image: ogImageSrc,
 };
 

@@ -1,4 +1,4 @@
-# Digital Memorial for Dr P J Thomas
+# Digital Museum for Dr P J Thomas
 
 Based on ScrewFast theme (![https://github.com/mearashadowfax/ScrewFast](https://github.com/mearashadowfax/ScrewFast)) and astro-theme-international (![https://github.com/openscript/astro-theme-international](https://github.com/openscript/astro-theme-international))
 

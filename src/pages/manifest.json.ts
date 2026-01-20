@@ -45,7 +45,7 @@ export const GET: APIRoute = async () => {
 
   const manifest = {
     short_name: "P J Thomas",
-    name: "Dr P J Thomas Memorial",
+    name: "Dr P J Thomas Museum",
     icons,
     display: "minimal-ui",
     id: "/",
